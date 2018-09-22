@@ -7,23 +7,13 @@ import './playlist.css';
  * @param {props} props
  */
 function PlayList(props) {
-  const categories = props.data.categories;
-
-  console.log(props.data);
-  return (<div>
+  return (<div className="Playlist">
     {
-      categories.map((category) => {
-        return (<div key={category.id} className="Playlist">
-          <h2>{category.title}</h2>
-          <p>{category.description}</p>
-          {
-            category.playlist.map((item) => {
-              return <Media {...item} key={item.id}/>
-            })
-          }
-        </div>)
+        props.playlist.map((item) => {
+        return <Media {...item} key={item.id}/>
       })
     }
   </div>)
 }
+
 export default PlayList;
