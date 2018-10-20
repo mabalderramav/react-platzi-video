@@ -1,13 +1,14 @@
 import React from 'react';
 import PlayList from '../../playlist/components/playlist';
+import './category.css';
 
 /**
  * This class handles Category component.
  */
 function Category(props) {
-  return (<div>
-    <p>{props.description}</p>
-    <h1>{props.title}</h1>
+  return (<div className="Category">
+    <p className="Category-description">{props.description}</p>
+    <h2 className="Category-title">{props.title}</h2>
     <PlayList playlist={props.playlist}/>
   </div>)
 }
